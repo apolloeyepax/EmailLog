@@ -50,6 +50,15 @@ MailHelper $helper;
 $helper->sendMail($email-address, $cc, $bcc, $subject, $body, $template, $attachment-location);
 ```
 
+| Parameter | Type | Description |
+|---|---|---|
+|$email-address| String| to whom e-mail is sent |
+|$cc | array | List of receivers |
+|$bcc | array  | List of receivers |
+|$subject| String | Subject of the mail |
+|$body | array passed to the body |
+|$template| String| templae file |
+|$attachment-location | String | file path to attachment | 
 
 ## Authors
 
