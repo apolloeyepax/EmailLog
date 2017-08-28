@@ -56,7 +56,7 @@ $helper->sendMail($email-address, $cc, $bcc, $subject, $body, $template, $attach
 |$cc | array | List of receivers |
 |$bcc | array  | List of receivers |
 |$subject| String | Subject of the mail |
-|$body | array passed to the body |
+|$body | array | passed to the body |
 |$template| String| templae file |
 |$attachment-location | String | file path to attachment | 
 
