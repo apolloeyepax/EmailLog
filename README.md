@@ -28,11 +28,9 @@ run:
 ```
 composer dump-autoload
 ```
-
 ```
 php artisan vendor:push
 ```
-
 ```
 php artisan migrate
 ```
