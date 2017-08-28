@@ -13,7 +13,7 @@ A project setup using Laravel 5.4v or higher.
 
 ### Installing
 
-###Run the command : 
+#### Run the command : 
 ```
 composer require deveyepax/email-log dev-master
 ```
