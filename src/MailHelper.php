@@ -46,7 +46,7 @@
                 
                 if ($email != null && $body != null && $template != null) {
                     $message->queue(new LskMail($template, $body, $subject, $attachment));
-                    EmailLog::log($email, $subject, $body, 0, $attachment);
+                    EmailLog::log($email, $subject, $body, $attachment);
 
                     return true;
                 } else {
