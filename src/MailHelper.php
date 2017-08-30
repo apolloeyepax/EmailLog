@@ -12,10 +12,12 @@
      *
      * @package DevEyepax\EmailLog
      */
-    class MailHelper extends Controller {
+    class MailHelper extends Controller
+    {
         private $helper;
 
-        public function _construct(Helper $helper) {
+        public function _construct(Helper $helper)
+        {
             $this->helper = $helper;
         }
 
@@ -31,7 +33,8 @@
          * @param string $attachment
          * @return bool
          */
-        public function sendMail($email = null, $cc = [], $bcc = [], $subject = null, $body = null, $template = null, $attachment = '') {
+        public function sendMail($email = null, $cc = [], $bcc = [], $subject = null, $body = null, $template = null, $attachment = '')
+        {
             try {
                 $message = Mail::to($email);
                 if ($cc != []) {
@@ -40,10 +43,10 @@
                 if ($bcc != []) {
                     $message->bcc($bcc);
                 }
-
-                //EmailLog::log($email, $subject, $body, 0, $attachment);
+                
                 if ($email != null && $body != null && $template != null) {
                     $message->queue(new LskMail($template, $body, $subject, $attachment));
+                    EmailLog::log($email, $subject, $body, 0, $attachment);
 
                     return true;
                 } else {
